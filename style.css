@@ -45,7 +45,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin-bottom: 64px;
+}
+
+.top-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .brand {
@@ -219,6 +227,51 @@ h2 {
   margin: 6px 0;
 }
 
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+}
+
+.split p {
+  line-height: 1.6;
+}
+
+.scene-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.scene-card {
+  background: linear-gradient(150deg, #edf3ea, #dce8dc);
+  border: 1px solid rgba(79, 106, 86, 0.2);
+  border-radius: 14px;
+  min-height: 84px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  color: var(--moss);
+}
+
+details {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(79, 106, 86, 0.15);
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details p {
+  margin: 10px 0 0;
+  line-height: 1.55;
+}
+
 .footer {
   text-align: center;
   padding: 20px;
@@ -238,5 +291,11 @@ h2 {
   }
   main {
     padding: 14px;
+  }
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .scene-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
