@@ -34,6 +34,34 @@ body {
   overflow: hidden;
 }
 
+.hero-photos {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.03);
+  animation: fadeCycle 28s linear infinite;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 252, 245, 0.16), rgba(228, 239, 235, 0.36));
+}
+
+.hero-photo.p1 { background-image: url("./mood-01.jpg"); animation-delay: 0s; }
+.hero-photo.p2 { background-image: url("./mood-02.jpg"); animation-delay: 7s; }
+.hero-photo.p3 { background-image: url("./mood-03.jpg"); animation-delay: 14s; }
+.hero-photo.p4 { background-image: url("./mood-04.jpg"); animation-delay: 21s; }
+
 .hero-overlay {
   position: absolute;
   inset: -20%;
@@ -367,6 +395,14 @@ details p {
 @keyframes drift {
   from { transform: translateY(-8px) rotate(0deg); }
   to { transform: translateY(12px) rotate(8deg); }
+}
+
+@keyframes fadeCycle {
+  0% { opacity: 0; transform: scale(1.03); }
+  6% { opacity: 1; }
+  20% { opacity: 1; transform: scale(1.01); }
+  26% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @media (max-width: 680px) {
