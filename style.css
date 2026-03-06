@@ -62,6 +62,12 @@ body {
   font-weight: 600;
 }
 
+.brand-logo {
+  display: block;
+  width: min(260px, 62vw);
+  height: auto;
+}
+
 .top-link {
   text-decoration: none;
   color: var(--ink);
