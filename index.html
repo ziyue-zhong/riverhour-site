@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RiverHour | Build Your Ear Stack</title>
+    <meta
+      name="description"
+      content="RiverHour curated ear stacks. Choose piercings, choose helix, and shop instantly."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <nav class="topbar">
+        <div class="brand">RiverHour</div>
+        <a class="top-link" href="#stacks">Shop Stacks</a>
+      </nav>
+      <section class="hero-content">
+        <p class="eyebrow">Natural. Tactile. Quiet Bold.</p>
+        <h1>Build Your Ear Stack</h1>
+        <p class="sub">
+          Curated sets for 2 or 3 piercings. No complex combinations, just
+          beautiful choices.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" data-piercing="2">2 Piercing Stack</button>
+          <button class="secondary" data-piercing="3">3 Piercing Stack</button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="selector" class="panel">
+        <h2>Step 1: Number of Piercings</h2>
+        <div class="pill-row">
+          <button class="pill selected" data-piercing="2">2 Piercings</button>
+          <button class="pill" data-piercing="3">3 Piercings</button>
+        </div>
+
+        <h2>Step 2: Helix Option</h2>
+        <div class="pill-row">
+          <button class="pill selected" data-helix="no">No Helix</button>
+          <button class="pill" data-helix="yes">Add Helix</button>
+        </div>
+      </section>
+
+      <section id="stacks" class="panel">
+        <div class="result-head">
+          <h2>Your Curated Sets</h2>
+          <p id="resultType"></p>
+        </div>
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <section class="panel notes">
+        <h2>How each set is built</h2>
+        <p><strong>Anchor:</strong> main sculptural stud (5-7mm)</p>
+        <p><strong>Orbit:</strong> secondary hoop or medium stud</p>
+        <p><strong>Dust:</strong> tiny accent piece</p>
+        <p><strong>Helix:</strong> optional cartilage stud</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 RiverHour</p>
+      <p>Replace checkout links in <code>script.js</code> with your Stripe links.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
