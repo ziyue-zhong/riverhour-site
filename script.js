@@ -7,7 +7,7 @@ const data = {
       dust: "Micro Dot Stud",
       helix: "-",
       price: "$78",
-      link: "https://buy.stripe.com/your-link-2-no-1"
+      link: ""
     },
     {
       name: "Soft Leaf Set",
@@ -16,7 +16,7 @@ const data = {
       dust: "Tiny Pearl Dot",
       helix: "-",
       price: "$82",
-      link: "https://buy.stripe.com/your-link-2-no-2"
+      link: ""
     },
     {
       name: "Seed Glow Set",
@@ -25,7 +25,7 @@ const data = {
       dust: "Mini Gem Dot",
       helix: "-",
       price: "$75",
-      link: "https://buy.stripe.com/your-link-2-no-3"
+      link: ""
     }
   ],
   "2-yes": [
@@ -36,7 +36,7 @@ const data = {
       dust: "Micro Dot Stud",
       helix: "Dew Helix Stud 2mm",
       price: "$89",
-      link: "https://buy.stripe.com/your-link-2-yes-1"
+      link: ""
     },
     {
       name: "Moon Drop + Helix",
@@ -45,7 +45,7 @@ const data = {
       dust: "Tiny Pearl Dot",
       helix: "Seed Helix Stud 2mm",
       price: "$92",
-      link: "https://buy.stripe.com/your-link-2-yes-2"
+      link: ""
     },
     {
       name: "Star Seed + Helix",
@@ -54,7 +54,7 @@ const data = {
       dust: "Mini Gem Dot",
       helix: "Micro Helix Dot 1.8mm",
       price: "$88",
-      link: "https://buy.stripe.com/your-link-2-yes-3"
+      link: ""
     }
   ],
   "3-no": [
@@ -65,7 +65,7 @@ const data = {
       dust: "Micro Dot Stud",
       helix: "-",
       price: "$94",
-      link: "https://buy.stripe.com/your-link-3-no-1"
+      link: ""
     },
     {
       name: "Leaf Curve Trio",
@@ -74,7 +74,7 @@ const data = {
       dust: "Tiny Pearl Dot",
       helix: "-",
       price: "$98",
-      link: "https://buy.stripe.com/your-link-3-no-2"
+      link: ""
     },
     {
       name: "Dawn Sculpt Trio",
@@ -83,7 +83,7 @@ const data = {
       dust: "Mini Gem Dot",
       helix: "-",
       price: "$96",
-      link: "https://buy.stripe.com/your-link-3-no-3"
+      link: ""
     }
   ],
   "3-yes": [
@@ -94,7 +94,7 @@ const data = {
       dust: "Micro Dot Stud",
       helix: "Dew Helix Stud 2mm",
       price: "$100",
-      link: "https://buy.stripe.com/your-link-3-yes-1"
+      link: ""
     },
     {
       name: "Leaf Curve + Helix",
@@ -103,7 +103,7 @@ const data = {
       dust: "Tiny Pearl Dot",
       helix: "Seed Helix Stud 2mm",
       price: "$104",
-      link: "https://buy.stripe.com/your-link-3-yes-2"
+      link: ""
     },
     {
       name: "Dawn Sculpt + Helix",
@@ -112,9 +112,16 @@ const data = {
       dust: "Mini Gem Dot",
       helix: "Micro Helix Dot 1.8mm",
       price: "$102",
-      link: "https://buy.stripe.com/your-link-3-yes-3"
+      link: ""
     }
   ]
+};
+
+const typeLinks = {
+  "2-no": "",
+  "2-yes": "",
+  "3-no": "",
+  "3-yes": ""
 };
 
 let selectedPiercing = "2";
@@ -149,9 +156,13 @@ function render() {
           <strong>Helix:</strong> ${item.helix}
         </p>
         <p class="price"><strong>Set Price:</strong> ${item.price}</p>
-        <a href="${item.link}" target="_blank" rel="noreferrer noopener">
-          <button class="cta">Add Set to Cart</button>
-        </a>
+        ${
+          typeLinks[key]
+            ? `<a href="${typeLinks[key]}" target="_blank" rel="noreferrer noopener">
+                <button class="cta">Add Set to Cart</button>
+              </a>`
+            : `<button class="cta" type="button" onclick="alert('Checkout will open soon.');">Coming Soon</button>`
+        }
       </article>
     `
     )
