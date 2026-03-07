@@ -406,6 +406,36 @@
   color: #847258;
 }
 
+.mouse-flower {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+  font-size: var(--size, 16px);
+  line-height: 1;
+  opacity: 0;
+  text-shadow: 0 3px 8px rgba(127, 93, 48, 0.25);
+  animation: flowerFall var(--fall, 1700ms) ease-out forwards;
+}
+
+@keyframes flowerFall {
+  0% {
+    opacity: 0;
+    transform: translate3d(var(--x), var(--y), 0) scale(0.7) rotate(0deg);
+  }
+  10% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--x) + var(--drift, 0px)), calc(var(--y) + var(--drop, 150px)), 0)
+      scale(1.08) rotate(var(--spin, 140deg));
+  }
+}
+
 .hero-main,
 .hero-side,
 .world-a,
