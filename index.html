@@ -3,66 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RiverHour | Poetic Sculptural Jewelry</title>
+    <title>RiverHour | Art Direction Preview</title>
     <meta
       name="description"
-      content="RiverHour is a poetic jewelry brand inspired by quiet natural moments, with curated earring stacks and tactile sculptural details."
+      content="RiverHour art direction homepage inspired by warm sunlight, tactile natural textures, and curated sculptural earring stacks."
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="site">
-    <header class="hero" id="top">
+  <body class="site" id="top">
+    <header class="site-header">
       <nav class="site-nav">
-        <a class="logo-link" href="#top">
+        <a class="logo-link" href="#top" aria-label="RiverHour home">
           <img src="./logo-transparent-cropped.png" alt="RiverHour" class="brand-logo" />
         </a>
         <div class="nav-links">
-          <a href="#styles">Shop</a>
-          <a href="#builder">Stacks</a>
+          <a href="#shop">Shop</a>
+          <a href="#stacks">Stacks</a>
           <a href="#singles">Singles</a>
           <a href="#about">About</a>
         </div>
       </nav>
-
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Poetic Independent Jewelry</p>
-          <h1>small stream moments you can wear</h1>
-          <p class="hero-sub">Curated Earring Stacks</p>
-          <p class="hero-support">
-            Small sculptural jewelry inspired by natural forms.
-          </p>
-          <a href="#builder" class="cta">Build Your Ear Stack</a>
-        </div>
-
-        <div class="hero-media" aria-label="Warm sunlight nature collage">
-          <div class="hero-photo hero-photo-main"></div>
-          <div class="hero-photo hero-photo-small a"></div>
-          <div class="hero-photo hero-photo-small b"></div>
-        </div>
-      </div>
     </header>
 
     <main class="content">
-      <section id="builder" class="section">
-        <div class="section-head">
+      <section class="act act-hero" id="shop">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Poetic Jewelry House</p>
+            <h1>small stream moments you can wear</h1>
+            <p class="hero-sub">Curated Earring Stacks</p>
+            <p class="hero-support">Small sculptural jewelry inspired by natural forms.</p>
+            <a href="#stacks" class="cta">Build Your Ear Stack</a>
+          </div>
+
+          <div class="hero-collage" aria-label="Warm sunlight and nature imagery">
+            <figure class="photo hero-main"></figure>
+            <figure class="photo hero-side"></figure>
+            <p class="hand-note">sunlight on skin, flowers, tiny gold</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="act act-entry" id="stacks">
+        <div class="section-copy">
           <h2>Build Your Ear Stack</h2>
-          <p>Choose your piercing count and start with a calm, curated base.</p>
+          <p>Choose your starting rhythm.</p>
         </div>
 
-        <div class="piercing-grid">
-          <article class="piercing-card">
+        <div class="entry-wrap">
+          <article class="entry-option option-two">
             <h3>2 Piercings</h3>
             <svg viewBox="0 0 120 180" class="ear-diagram" role="img" aria-label="2 piercing ear diagram">
               <path d="M70 12c28 8 40 36 36 66-4 26-20 47-38 62-12 10-26 18-35 28-7-14-9-32-6-50 4-24 3-52 10-73 6-20 17-32 33-33z"></path>
               <circle cx="44" cy="130" r="5"></circle>
               <circle cx="54" cy="150" r="5"></circle>
             </svg>
-            <p>Balanced and effortless. A soft daily stack with sculptural focus.</p>
-            <button type="button" class="pill-btn">Choose 2 Piercings</button>
+            <button type="button" class="entry-btn">2 Piercings</button>
           </article>
 
-          <article class="piercing-card">
+          <article class="entry-option option-three">
             <h3>3 Piercings</h3>
             <svg viewBox="0 0 120 180" class="ear-diagram" role="img" aria-label="3 piercing ear diagram">
               <path d="M70 12c28 8 40 36 36 66-4 26-20 47-38 62-12 10-26 18-35 28-7-14-9-32-6-50 4-24 3-52 10-73 6-20 17-32 33-33z"></path>
@@ -70,85 +69,69 @@
               <circle cx="50" cy="141" r="5"></circle>
               <circle cx="60" cy="158" r="5"></circle>
             </svg>
-            <p>Layered but still clean. More rhythm, more tiny moments of light.</p>
-            <button type="button" class="pill-btn">Choose 3 Piercings</button>
+            <button type="button" class="entry-btn">3 Piercings</button>
           </article>
         </div>
       </section>
 
-      <section id="styles" class="section">
-        <div class="section-head">
-          <h2>Curated Stack Styles</h2>
-          <p>Warm sunlight styling, tactile surfaces, and small organic forms.</p>
+      <section class="act act-world" id="about">
+        <div class="world-copy">
+          <p class="eyebrow">Brand World</p>
+          <h2>Macro texture, warm skin light, flowers, leaf shadow, brushed metal.</h2>
+          <p>
+            RiverHour feels like an art book of close natural moments. Quiet,
+            tactile, and slightly whimsical.
+          </p>
+          <p class="hand-note">keep the warmth and the hand-feel</p>
         </div>
 
-        <div class="style-grid">
-          <article class="style-card">
-            <div class="style-photo wildflower" aria-hidden="true"></div>
-            <div class="style-copy">
-              <h3>Wildflower Stack</h3>
-              <p>Anchor flower stud, tiny orbit hoop, soft dust gem.</p>
-              <button type="button" class="card-btn">Coming Soon</button>
-            </div>
-          </article>
-          <article class="style-card">
-            <div class="style-photo pebble" aria-hidden="true"></div>
-            <div class="style-copy">
-              <h3>Pebble Stack</h3>
-              <p>Smooth pebble anchor with warm matte micro accents.</p>
-              <button type="button" class="card-btn">Coming Soon</button>
-            </div>
-          </article>
-          <article class="style-card">
-            <div class="style-photo dew" aria-hidden="true"></div>
-            <div class="style-copy">
-              <h3>Dew Stack</h3>
-              <p>Droplet-inspired silhouette with subtle sunlit sparkle.</p>
-              <button type="button" class="card-btn">Coming Soon</button>
-            </div>
-          </article>
-          <article class="style-card">
-            <div class="style-photo leaf" aria-hidden="true"></div>
-            <div class="style-copy">
-              <h3>Leaf Stack</h3>
-              <p>Soft leaf linework and tiny stones for quiet movement.</p>
-              <button type="button" class="card-btn">Coming Soon</button>
-            </div>
-          </article>
+        <div class="world-collage">
+          <figure class="photo world-a"></figure>
+          <figure class="photo world-b"></figure>
+          <figure class="photo world-c"></figure>
+          <figure class="photo world-d"></figure>
         </div>
       </section>
 
-      <section class="section">
-        <div class="inspiration-image">
-          <div class="inspiration-overlay">
-            <p>Inspired by quiet natural moments.</p>
-          </div>
+      <section class="act act-signature" id="singles">
+        <div class="section-copy">
+          <h2>Signature Stack Products</h2>
         </div>
-      </section>
 
-      <section id="singles" class="section singles">
-        <div class="section-head">
-          <h2>Singles</h2>
-          <p>Small individual pieces for gentle custom layering.</p>
-        </div>
-        <div class="single-list">
-          <div class="single-item">Seed Stud · Coming Soon</div>
-          <div class="single-item">Droplet Stud · Coming Soon</div>
-          <div class="single-item">Tiny Hoop · Coming Soon</div>
-        </div>
-      </section>
+        <div class="signature-flow">
+          <article class="stack stack-one">
+            <figure class="photo stack-photo wildflower"></figure>
+            <h3>Wildflower Stack</h3>
+            <p>Soft bloom anchor with tiny warm accents.</p>
+            <button type="button" class="entry-btn">Coming Soon</button>
+          </article>
 
-      <section id="about" class="section about">
-        <h2>About RiverHour</h2>
-        <p>
-          RiverHour lives in a warm, sunlit world of dew, leaves, skin, and soft
-          shadow. We design jewelry that feels discovered, not manufactured.
-        </p>
+          <article class="stack stack-two">
+            <figure class="photo stack-photo pebble"></figure>
+            <h3>Pebble Stack</h3>
+            <p>Rounded sculptural core with matte rhythm.</p>
+            <button type="button" class="entry-btn">Coming Soon</button>
+          </article>
+
+          <article class="stack stack-three">
+            <figure class="photo stack-photo dew"></figure>
+            <h3>Dew Stack</h3>
+            <p>Dewdrop glint with light orbit details.</p>
+            <button type="button" class="entry-btn">Coming Soon</button>
+          </article>
+
+          <article class="stack stack-four">
+            <figure class="photo stack-photo leaf"></figure>
+            <h3>Leaf Stack</h3>
+            <p>Leaf line motif with subtle soft gold.</p>
+            <button type="button" class="entry-btn">Coming Soon</button>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© 2026 RiverHour · Poetic Jewelry for Quiet Days</p>
+      <p>© 2026 RiverHour</p>
     </footer>
   </body>
 </html>
