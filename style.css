@@ -41,7 +41,7 @@
 }
 
 .brand-logo {
-  width: min(110px, 28vw);
+  width: min(190px, 46vw);
   height: auto;
 }
 
@@ -429,6 +429,10 @@
 
   .site-nav {
     gap: 12px;
+  }
+
+  .brand-logo {
+    width: min(170px, 52vw);
   }
 
   .nav-links {
